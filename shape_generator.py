@@ -1,33 +1,42 @@
 import turtle
-
 bob = turtle.Turtle()
+
+# sets the color of the pen to red
+# background to black
 bob.color("red")
 turtle.Screen().bgcolor("black")
 
+# generates a square with length sides
 def square(t, length):
-    bob = t
     for i in range(4):
         bob.fd(length)
         bob.lt(90)
     print(bob)
 
+# generates a triangle
+'''
+def triangle(t, length):
+    for i in range(2):
+        bob.fd(length)
+        bob.lt(90)
+'''
+
+# generates a polygon with n sides
 def polygon(t, length, n):
-    bob = t
     for i in range(n):
         bob.fd(length)
-        bob.lt(360/n)
+        bob.lt(360 / n)
     print(bob)
 
+# generates a circle with r radius
 def circle(t, r, length):
-    bob = t
     for i in range(r):
         bob.fd(length)
-        bob.lt((360/r))
+        bob.lt((360 / r))
     print(bob)
 
-# 3 nested for loops, lol
+# generates a daisy
 def daisy(t, length):
-    bob = t
     for i in range(9):
         bob.fd(length)
         bob.rt(120)
@@ -36,12 +45,20 @@ def daisy(t, length):
             bob.fd(length)
             bob.lt(-20)
             bob.color("orange")
-
     print(bob)
+    
+# generates a nautilus
+def nautilus(t):
+    size = 1
+    while (True):
+        for i in range(4):
+            bob.fd(size)
+            bob.rt(90)
+            size = size + 1
+        bob.rt(10)
 
-
+# generates a  turbine shape
 def turbine(t, length):
-    bob = t
     for i in range(16):
         bob.fd(length)
         bob.lt(-45)
@@ -55,6 +72,7 @@ def turbine(t, length):
                     bob.fd(length)
                     bob.lt(10)
     print(bob)
+
 # coming back to this one later
 '''
 def arc(t, r, length, angle):
@@ -63,26 +81,15 @@ def arc(t, r, length, angle):
         bob.fd(length)
         bob.lt((angle))
     print(bob)
-
 '''
-def nautilus(t, ):
-        bob = t
-        size=1
-        while (True):
-            for _ in range(4):
-                bob.forward(size)
-            bob.right(90)
-            size = size + 1
-            bob.right(10)
+#nautilus(bob)
+# polygon(bob,50, 5)
+# circle(bob, 50, 10)
+# arc(bob, 20, 10, 360)
+# turbine(bob, 10)
+# daisy(bob, 20)
+triangle(bob, 10)
 
-#polygon(bob,50, 5)
-#circle(bob, 50, 10)
-#arc(bob, 20, 10, 360)
-#turbine(bob, 10)
-#daisy(bob, 20)
-turtle.mainloop()
-
-'''
 input1 = ''
 while input1 != 'q':
     input1 = input("Please c, p, a or s for shapebuilder: ")
@@ -91,15 +98,11 @@ while input1 != 'q':
 
     if input1 == 'c':
         circle(bob, 40, 10)
-    
+
     elif input1 == 'p':
         polygon(bob, 40, 6)
-    
+
     elif input1 == 's':
         square(bob, 40)
-    
-    elif input1 == 'a':
-        arc(bob, 50, 10, 90)
 
 turtle.mainloop()
-'''
