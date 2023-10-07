@@ -1,5 +1,3 @@
-#copyright Lloyd Higgins 2023
-
 import turtle
 
 bob = turtle.Turtle()
