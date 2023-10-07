@@ -67,6 +67,15 @@ def arc(t, r, length, angle):
     print(bob)
 
 '''
+def nautilus(t, ):
+        bob = t
+        size=1
+        while (True):
+            for _ in range(4):
+                bob.forward(size)
+            bob.right(90)
+            size = size + 1
+            bob.right(10)
 
 #polygon(bob,50, 5)
 #circle(bob, 50, 10)
