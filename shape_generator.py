@@ -106,28 +106,3 @@ while input1 != 'q':
         square(bob, 40)
 
 turtle.mainloop()
-
-'''
-turtle.colormode(255)
-bob.color(57,255,20)
-turtle.Screen().bgcolor("black")
-turtle.mainloop()
-
-def koch_curve(t, length):
-    if length < 3:
-        t.fd(length)
-        return
-    koch_curve(t, (length/3) *1.2)
-    t.lt(60)
-    koch_curve(t, (length/3) *1.2)
-    t.rt(120)
-    koch_curve(t, (length/3) *1.2)
-    t.lt(60)
-    koch_curve(t, (length/3) *1.2)
-
-def snowflake(t, length):
-    for i in range(3):
-        koch_curve(t, length)
-        t.rt(120)
-
-'''
