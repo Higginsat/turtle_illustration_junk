@@ -1,12 +1,20 @@
+# 11.23
+# Andrew-at
+# a shape generator using the the Turtle graphics module 
+
 import turtle
+
+# a turtle sprite named 'bob'
 bob = turtle.Turtle()
 
-# sets the color of the pen to red
+# sets the color of the pen to green
+# color can also be RGB value or name
+bob.color("green")
+
 # background to black
-bob.color("red")
 turtle.Screen().bgcolor("black")
 
-# generates a square with length sides
+# generates a square with 'length' sides
 def square(t, length):
     for i in range(4):
         bob.fd(length)
@@ -14,6 +22,7 @@ def square(t, length):
     print(bob)
 
 # generates a triangle
+# incomplete at this time, figuring out right angles
 '''
 def triangle(t, length):
     for i in range(2):
@@ -21,22 +30,25 @@ def triangle(t, length):
         bob.lt(90)
 '''
 
-# generates a polygon with n sides
 def polygon(t, length, n):
+""" generates a polygon with n number of sides sides """
+
     for i in range(n):
         bob.fd(length)
         bob.lt(360 / n)
     print(bob)
 
-# generates a circle with r radius
 def circle(t, r, length):
+""" generates a circle with r size radius """
+
     for i in range(r):
         bob.fd(length)
         bob.lt((360 / r))
     print(bob)
 
-# generates a daisy
 def daisy(t, length):
+""" generates a 'daisy' type shape """
+
     for i in range(9):
         bob.fd(length)
         bob.rt(120)
@@ -47,8 +59,9 @@ def daisy(t, length):
             bob.color("orange")
     print(bob)
     
-# generates a nautilus
 def nautilus(t):
+""" generates a nautilus """
+
     size = 1
     while (True):
         for i in range(4):
@@ -57,8 +70,9 @@ def nautilus(t):
             size = size + 1
         bob.rt(10)
 
-# generates a  turbine shape
 def turbine(t, length):
+""" generates a turbine/spiral sort of shape using nested for loops """ 
+
     for i in range(16):
         bob.fd(length)
         bob.lt(-45)
@@ -88,7 +102,7 @@ def arc(t, r, length, angle):
 # arc(bob, 20, 10, 360)
 # turbine(bob, 10)
 # daisy(bob, 20)
-triangle(bob, 10)
+# triangle(bob, 10)
 
 input1 = ''
 while input1 != 'q':
